@@ -1,0 +1,29 @@
+{
+  "name": "frontend_2_envion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MontolioV/frontend_2_envion.git"
+  },
+  "author": "MontolioV",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MontolioV/frontend_2_envion/issues"
+  },
+  "homepage": "https://github.com/MontolioV/frontend_2_envion#readme",
+  "devDependencies": {
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.0"
+  },
+  "dependencies": {
+    "npm": "^6.4.1"
+  }
+}
