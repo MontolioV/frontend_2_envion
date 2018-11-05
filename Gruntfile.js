@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         },
         cssmin: {
             css: {
-                src: 'src/css/*.css',
+                src: 'src/css/main.css',
                 dest: 'prod/css/full.min.css'
             }
         },
@@ -41,7 +41,11 @@ module.exports = function(grunt) {
                     yuicompress: true
                 },
                 files: {
-                    'src/css/main.css': 'src/css/less/main.less'
+                    'src/css/main.css': [
+                        'node_modules/normalize.css/normalize.css',
+                        'src/css/global.less',
+                        'src/bem/**/*.less'
+                    ]
                 }
             }
         }
@@ -56,8 +60,8 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', [
-        'less',
         'clean',
+        'less',
         'copy',
         'cssmin',
         'uglify'

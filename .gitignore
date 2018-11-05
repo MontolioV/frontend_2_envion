@@ -4,3 +4,4 @@ prod
 **.iml
 **/.directory
 
+/src/css/main.css
