@@ -5,3 +5,4 @@ prod
 **/.directory
 
 /src/css/main.css
+/src/js/main.js

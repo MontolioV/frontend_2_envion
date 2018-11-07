@@ -1,7 +1,6 @@
 {
   "name": "frontend_2_envion",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,14 +16,18 @@
   },
   "homepage": "https://github.com/MontolioV/frontend_2_envion#readme",
   "devDependencies": {
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-less": "^2.0.0",
-    "grunt-contrib-uglify": "^4.0.0"
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
+    "npm": "^6.4.1",
     "normalize.css": "^8.0.0",
-    "npm": "^6.4.1"
-  }
+    "gulp-css-preprocessor": "0.0.3"
+  },
+  "description": ""
 }
