@@ -1,4 +1,4 @@
-const {gulp, series, parallel, src, dest} = require('gulp');
+const {gulp, series, parallel, src, dest, watch} = require('gulp');
 const del = require('del');
 const rename = require('gulp-rename');
 const gulpCssPreprocessor = require('gulp-css-preprocessor');
@@ -54,6 +54,12 @@ function jsUglify() {
         .pipe(dest('prod/js'))
 }
 
+function watchers() {
+    watch('src/**/*.less', series(cssCompile, cssNormalize));
+    watch(['src/js/**/*.js', '!src/js/main.js'], jsConcat);
+}
+
+exports.watchers = watchers;
 exports.clean = clean;
 exports.dev = parallel(
     series(cssCompile, cssNormalize),
