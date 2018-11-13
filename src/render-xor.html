@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgba(244, 164, 96, 0.27);
+        }
+        body * {
+            display: block;
+            margin: 10px;
+        }
+        .fl-h {
+            display: flex;
+            background: rgb(209, 255, 61);
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <canvas id="canvas" width="256" height="256" style="border: 1px solid black; "></canvas>
+        <input type="text" id="modifier" onkeyup="renderImg()">
+        <form name="modeForm" onchange="renderImg()">
+            <div class="fl-h">
+                <input type="radio" id="modeMultiply" name="mode" value="modeMultiply" />
+                <label for="modeMultiply">*</label>
+            </div>
+            <div class="fl-h">
+                <input type="radio" id="modeDivide" name="mode" value="modeDivide" />
+                <label for="modeDivide">/</label>
+            </div>
+            <div class="fl-h">
+                <input type="radio" id="modeRemainder" name="mode" value="modeRemainder" />
+                <label for="modeRemainder">%</label>
+            </div>
+            <div class="fl-h">
+                <input type="radio" id="modeXOR" name="mode" value="modeXOR" />
+                <label for="modeXOR">^</label>
+            </div>
+        </form>
+    </main>
+
+    <script src="js/renderer.js"></script>
+</body>
+</html>
